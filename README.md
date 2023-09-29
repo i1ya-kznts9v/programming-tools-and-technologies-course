@@ -1,4 +1,4 @@
 # Programming tools and technologies course
 
 ## Tasks
-* 01.IO_flush
+1. IO_flush

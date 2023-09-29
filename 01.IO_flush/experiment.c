@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <string.h>
 
-typedef struct options 
+typedef struct options
 { 
     bool redirect; 
     bool newline; 

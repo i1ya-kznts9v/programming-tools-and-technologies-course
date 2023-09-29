@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -g -Wall
 
 TARGET = experiment
-RESULT = ./result.txt
+RESULT = ./result*.txt
 
 all: $(TARGET)
 
