@@ -48,7 +48,7 @@ do
         set -- "$@" -p
         ;;
     *)
-        set -- "$@" $param
+        set -- "$@" "$param"
         ;;
     esac
 done
