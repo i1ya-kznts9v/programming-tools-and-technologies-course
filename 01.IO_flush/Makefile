@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -g -Wall
 
-TARGET = experiment
+TARGET = io_flush
 RESULT = ./result*.txt
 
 all: $(TARGET)

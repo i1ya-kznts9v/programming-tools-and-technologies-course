@@ -17,8 +17,8 @@ for ((i = 0; i < 8; i++)); do
     args="${args}-f "
   fi
 
-  echo "./experiment $args"
-  ./experiment "$args"
+  echo "./io_flush $args"
+  ./io_flush "$args"
 
   if ((i & 4)); then
     cat result.txt
