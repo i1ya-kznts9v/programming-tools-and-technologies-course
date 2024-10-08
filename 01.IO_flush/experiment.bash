@@ -18,7 +18,7 @@ for ((i = 0; i < 8; i++)); do
   fi
 
   echo "./experiment $args"
-  ./experiment $args
+  ./experiment "$args"
 
   if ((i & 4)); then
     cat result.txt
