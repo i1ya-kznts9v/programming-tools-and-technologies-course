@@ -26,6 +26,8 @@ jobs:
 
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Build io_flush
         run: |
@@ -47,6 +49,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: fractal
+          path: ${{ github.workspace }}/03.Fractal
+
+      - name: Upload test_fractal
+        uses: actions/upload-artifact@v4
+        with:
+          name: test_fractal
           path: ${{ github.workspace }}/03.Fractal
 
   test:
@@ -74,8 +82,16 @@ jobs:
           name: fractal
           path: 03.Fractal
 
+      - name: Download test_fractal
+        uses: actions/download-artifact@v4
+        with:
+          name: test_fractal
+          path: 03.Fractal
+
       - name: Test fractal
         run: |
           cd 03.Fractal
           chmod u+x fractal
           ./fractal
+          chmod u+x test_fractal
+          ./test_fractal

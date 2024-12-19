@@ -4,8 +4,8 @@ Application for generating fractals from the list of supported fractals. Images 
 
 ## Supported fractals
 
-1. Mandelbrot
-2. Sierpinski
+1. `Mandelbrot`
+2. `Sierpinski`
 
 ## Build
 
