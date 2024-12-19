@@ -13,7 +13,13 @@ Application for generating fractals from the list of supported fractals. Images 
 
 ## Usage
 
+Run application:
+
 `./fractal`
+
+Run tests:
+
+`./test_fractal`
 
 ## Clean
 
