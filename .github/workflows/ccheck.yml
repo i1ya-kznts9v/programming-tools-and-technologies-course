@@ -38,6 +38,17 @@ jobs:
           name: io_flush
           path: ${{ github.workspace }}/01.IO_flush
 
+      - name: Build fractal
+        run: |
+          cd 03.Fractal
+          make
+
+      - name: Upload fractal
+        uses: actions/upload-artifact@v4
+        with:
+          name: fractal
+          path: ${{ github.workspace }}/03.Fractal
+
   test:
     name: Test
     runs-on: ubuntu-latest
@@ -56,3 +67,15 @@ jobs:
           chmod u+x io_flush
           chmod u+x experiment.bash
           ./experiment.bash
+
+      - name: Download fractal
+        uses: actions/download-artifact@v4
+        with:
+          name: fractal
+          path: 03.Fractal
+
+      - name: Test fractal
+        run: |
+          cd 03.Fractal
+          chmod u+x fractal
+          ./fractal
