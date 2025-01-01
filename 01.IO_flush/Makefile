@@ -1,5 +1,6 @@
 CC = gcc
 CFLAGS = -g -Wall
+RM = rm -f
 
 TARGET = io_flush
 RESULT = ./result*.txt

@@ -1,5 +1,6 @@
 CC = gcc
 CFLAGS = -g -Wall
+RM = rm -f
 
 TARGET = memory_overcommit
 
